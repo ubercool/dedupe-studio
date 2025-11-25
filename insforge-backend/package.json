@@ -1,0 +1,13 @@
+{
+  "name": "insforge-dedupe-backend",
+  "version": "1.0.0",
+  "description": "InsForge backend for deduplication service",
+  "type": "module",
+  "scripts": {
+    "deploy": "echo 'Deploy using InsForge MCP tools'"
+  },
+  "dependencies": {
+    "fuzzball": "^2.2.3",
+    "papaparse": "^5.5.3"
+  }
+}

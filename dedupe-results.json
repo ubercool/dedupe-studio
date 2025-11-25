@@ -1,0 +1,307 @@
+{
+  "timestamp": "2025-11-19T02:25:23.274Z",
+  "originalCount": 13,
+  "cleanCount": 7,
+  "removedCount": 6,
+  "results": {
+    "cleanRecords": [
+      {
+        "firstName": "Benjamin",
+        "lastName": "Smith",
+        "email": "ben.smith@gmail.com",
+        "company": "Tech Corp"
+      },
+      {
+        "firstName": "Robert",
+        "lastName": "Johnson",
+        "email": "rjohnson@email.com",
+        "company": "ABC Company"
+      },
+      {
+        "firstName": "Timothy",
+        "lastName": "Choate",
+        "email": "tim@aptimus.com",
+        "company": "Aptimus Inc."
+      },
+      {
+        "firstName": "Sarah",
+        "lastName": "Williams",
+        "email": "sarah@email.com",
+        "company": "XYZ Ltd"
+      },
+      {
+        "firstName": "Michael",
+        "lastName": "Brown",
+        "email": "mbrown@company.com",
+        "company": "StartUp Co"
+      },
+      {
+        "firstName": "William",
+        "lastName": "Davis",
+        "email": "wdavis@email.com",
+        "company": "Global Inc"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Smith",
+        "email": "john1@company1.com",
+        "company": "Company One"
+      }
+    ],
+    "removedCount": 6,
+    "duplicates": [
+      {
+        "indices": [
+          0,
+          1
+        ],
+        "records": [
+          {
+            "firstName": "Benjamin",
+            "lastName": "Smith",
+            "email": "ben.smith@gmail.com",
+            "company": "Tech Corp"
+          },
+          {
+            "firstName": "Ben",
+            "lastName": "Smith",
+            "email": "ben.smith@gmail.com",
+            "company": "Tech Corp"
+          }
+        ],
+        "confidence": 100,
+        "reason": "Exact email match",
+        "scores": {
+          "firstName": 0,
+          "lastName": 0,
+          "email": 0,
+          "company": 0,
+          "overall": 0
+        }
+      },
+      {
+        "indices": [
+          0,
+          2
+        ],
+        "records": [
+          {
+            "firstName": "Benjamin",
+            "lastName": "Smith",
+            "email": "ben.smith@gmail.com",
+            "company": "Tech Corp"
+          },
+          {
+            "firstName": "Benny",
+            "lastName": "Smith",
+            "email": "b.smith@techcorp.com",
+            "company": "Tech Corporation"
+          }
+        ],
+        "confidence": 88,
+        "reason": "\"Benjamin\" and \"Benny\" are related names, Last names match, Same company, Same email domain",
+        "scores": {
+          "firstName": 95,
+          "lastName": 100,
+          "email": 58,
+          "company": 100,
+          "overall": 87.75
+        }
+      },
+      {
+        "indices": [
+          1,
+          2
+        ],
+        "records": [
+          {
+            "firstName": "Ben",
+            "lastName": "Smith",
+            "email": "ben.smith@gmail.com",
+            "company": "Tech Corp"
+          },
+          {
+            "firstName": "Benny",
+            "lastName": "Smith",
+            "email": "b.smith@techcorp.com",
+            "company": "Tech Corporation"
+          }
+        ],
+        "confidence": 88,
+        "reason": "\"Ben\" and \"Benny\" are related names, Last names match, Same company, Same email domain",
+        "scores": {
+          "firstName": 95,
+          "lastName": 100,
+          "email": 58,
+          "company": 100,
+          "overall": 87.75
+        }
+      },
+      {
+        "indices": [
+          3,
+          4
+        ],
+        "records": [
+          {
+            "firstName": "Robert",
+            "lastName": "Johnson",
+            "email": "rjohnson@email.com",
+            "company": "ABC Company"
+          },
+          {
+            "firstName": "Bob",
+            "lastName": "Johnson",
+            "email": "bob.j@abc.com",
+            "company": "ABC Co."
+          }
+        ],
+        "confidence": 87,
+        "reason": "\"Robert\" and \"Bob\" are related names, Last names match, Same company, Same email domain",
+        "scores": {
+          "firstName": 95,
+          "lastName": 100,
+          "email": 54,
+          "company": 100,
+          "overall": 86.75
+        }
+      },
+      {
+        "indices": [
+          5,
+          6
+        ],
+        "records": [
+          {
+            "firstName": "Timothy",
+            "lastName": "Choate",
+            "email": "tim@aptimus.com",
+            "company": "Aptimus Inc."
+          },
+          {
+            "firstName": "Tim",
+            "lastName": "Choate",
+            "email": "tchoate@aptimus.com",
+            "company": "Aptimus Inc"
+          }
+        ],
+        "confidence": 95,
+        "reason": "\"Timothy\" and \"Tim\" are related names, Last names match, Same company, Similar email addresses",
+        "scores": {
+          "firstName": 95,
+          "lastName": 100,
+          "email": 87,
+          "company": 100,
+          "overall": 95
+        }
+      },
+      {
+        "indices": [
+          9,
+          10
+        ],
+        "records": [
+          {
+            "firstName": "William",
+            "lastName": "Davis",
+            "email": "wdavis@email.com",
+            "company": "Global Inc"
+          },
+          {
+            "firstName": "Bill",
+            "lastName": "Davis",
+            "email": "bill.davis@global.com",
+            "company": "Global Incorporated"
+          }
+        ],
+        "confidence": 92,
+        "reason": "\"William\" and \"Bill\" are related names, Last names match, Same company, Similar email addresses",
+        "scores": {
+          "firstName": 95,
+          "lastName": 100,
+          "email": 75,
+          "company": 100,
+          "overall": 92
+        }
+      },
+      {
+        "indices": [
+          11,
+          12
+        ],
+        "records": [
+          {
+            "firstName": "John",
+            "lastName": "Smith",
+            "email": "john1@company1.com",
+            "company": "Company One"
+          },
+          {
+            "firstName": "John",
+            "lastName": "Smith",
+            "email": "john2@company2.com",
+            "company": "Company Two"
+          }
+        ],
+        "confidence": 85,
+        "reason": "\"John\" and \"John\" are related names, Last names match, Similar email addresses",
+        "scores": {
+          "firstName": 95,
+          "lastName": 100,
+          "email": 89,
+          "company": 33,
+          "overall": 85.45
+        }
+      }
+    ],
+    "clusters": [
+      {
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "confidence": 100,
+        "reason": "Exact email match"
+      },
+      {
+        "indices": [
+          3,
+          4
+        ],
+        "confidence": 87,
+        "reason": "\"Robert\" and \"Bob\" are related names, Last names match, Same company, Same email domain"
+      },
+      {
+        "indices": [
+          5,
+          6
+        ],
+        "confidence": 95,
+        "reason": "\"Timothy\" and \"Tim\" are related names, Last names match, Same company, Similar email addresses"
+      },
+      {
+        "indices": [
+          9,
+          10
+        ],
+        "confidence": 92,
+        "reason": "\"William\" and \"Bill\" are related names, Last names match, Same company, Similar email addresses"
+      },
+      {
+        "indices": [
+          11,
+          12
+        ],
+        "confidence": 85,
+        "reason": "\"John\" and \"John\" are related names, Last names match, Similar email addresses"
+      }
+    ],
+    "summary": {
+      "totalRecords": 13,
+      "duplicatesFound": 7,
+      "clustersFound": 5,
+      "recordsAffected": 11
+    }
+  }
+}
