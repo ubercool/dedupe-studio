@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import * as fuzz from 'fuzzball';
 import Papa from 'papaparse';
 
-const NICKNAME_MAP: Record<string, string[]> = {
+const NICKNAME_MAP: { [key: string]: string[] } = {
   'robert': ['rob', 'bob', 'bobby'], 'william': ['will', 'bill', 'billy'],
   'james': ['jim', 'jimmy'], 'michael': ['mike', 'mikey']
 };
@@ -18,7 +18,7 @@ function areNamesRelated(name1: string, name2: string): boolean {
   return false;
 }
 
-interface Record { firstName?: string; lastName?: string; email?: string; company?: string; [key: string]: any; }
+interface ContactRecord { firstName?: string; lastName?: string; email?: string; company?: string; [key: string]: any; }
 
 class DedupeEngine {
   threshold = 75;
