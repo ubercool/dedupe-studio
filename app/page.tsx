@@ -30,7 +30,7 @@ export default function DedupeStudio() {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'duplicates' | 'clean'>('duplicates');
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://m495c59f.us-east.insforge.app';
+  const API_URL = '/api/deduplicate';
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -70,7 +70,7 @@ export default function DedupeStudio() {
     setError(null);
     try {
       const csvContent = await file.text();
-      const response = await fetch(`${API_URL}/functions/v1/deduplicate`, {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain' },
         body: csvContent,
