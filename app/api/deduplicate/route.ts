@@ -24,7 +24,7 @@ class DedupeEngine {
   threshold = 75;
   weights = { firstName: 0.3, lastName: 0.25, email: 0.25, company: 0.2 };
   
-  compareRecords(r1: Record, r2: Record) {
+  compareRecords(r1: ContactRecord, r2: ContactRecord) {
     const s = { firstName: 0, lastName: 0, email: 0, company: 0, overall: 0 };
     if (r1.email && r2.email && r1.email.toLowerCase() === r2.email.toLowerCase()) return { match: true, confidence: 100, reason: 'Exact email', scores: s };
     if (r1.firstName && r2.firstName) s.firstName = areNamesRelated(r1.firstName, r2.firstName) ? 95 : fuzz.ratio(r1.firstName.toLowerCase(), r2.firstName.toLowerCase());
